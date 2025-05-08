@@ -1,5 +1,5 @@
+import OfflineIndicator from '@/components/OfflineIndicator';
 import NoteList from '../components/NoteList';
-import { useEffect } from 'react';
 
 interface SyncManager {
   getTags(): Promise<string[]>;
@@ -24,6 +24,7 @@ declare global {
 export default function Home() {
   return (
     <div>
+      <OfflineIndicator/>
       <NoteList />
     </div>
   );

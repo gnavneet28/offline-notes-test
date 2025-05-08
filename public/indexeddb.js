@@ -74,7 +74,7 @@ export const editOfflineNote = async (updatedNote) => {
     const transaction = db.transaction('local-notes', 'readwrite');
     const store = transaction.objectStore('local-notes');
 
-    const request = store.put(updatedNote);
+    const request = store.put({...updatedNote, updatedAt: new Date()});
 
     request.onsuccess = () => {
       resolve();

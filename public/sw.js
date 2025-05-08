@@ -71,7 +71,7 @@ async function handlePostRequest(request) {
 async function syncNotes() {
   console.log('Syncing notes...');
   try {
-    //refreshNotes();
+    // refreshNotes();
   } catch (error) {
     console.error('Error syncing note:', error);
   }
